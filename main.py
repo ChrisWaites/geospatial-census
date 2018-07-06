@@ -1,16 +1,16 @@
-import itertools
 import csv
-from collections import defaultdict
-import time
+import os
 
 from states import states
-from cities import cities
 from counties import counties
 from coords import coords
 
-file_name = 'data/usa_00006.csv'
+file_name = 'data/usa_00001.csv'
+out_file_name = 'out/coordinates.csv'
 
-with open('coordinates.csv', 'w') as g:
+os.makedirs('out', exist_ok=True)
+
+with open(out_file_name, 'w') as g:
     with open(file_name) as f:
         reader = csv.DictReader(f)
         for line in reader:
@@ -22,9 +22,9 @@ with open('coordinates.csv', 'w') as g:
                 state = states[line['STATEICP']]
                 county = counties[line['STATEICP']][line['COUNTY']]
                 enum_dist = line['ENUMDIST']
-                x, y = coords[state_id][county_id]
+                latitude, longitude = coords[state_id][county_id]
 
-                g.write('{}, {}\n'.format(x, y))
+                g.write('{}, {}\n'.format(latitude, longitude))
             except:
                 pass
 

@@ -1,6 +1,5 @@
 import fiona
 import pyproj 
-from osgeo import osr
 from collections import defaultdict
 
 file_name = 'data/gis/US_county_1930_conflated.shp'
