@@ -1,5 +1,11 @@
 # Geospatial Tools for IPUMS Census Data
 
+## Setup
+
+This repository was developed using Python version `3.6.5`.
+You can install the required dependencies via `pip install -r requirements.txt`.
+
+
 ## Getting a Census Extract
 
 [1] Create an account on the [IPUMS USA site](https://usa.ipums.org/usa/index.shtml)
@@ -47,9 +53,9 @@ The following should be your directory structure.
 
 * `main.py`
 * `/data`
-  * `usa_1930_5.csv` // Required from GIS extract
-  * `/gis`
-    * `/1930`
+  * `/1930`
+    * `usa_1930_5.csv` // Required from census extract
+    * `/gis`
       * `US_county_1930_conflated.shp` // Required from GIS extract
       * `US_county_1930_conflated.prj` // Required from GIS extract
 
