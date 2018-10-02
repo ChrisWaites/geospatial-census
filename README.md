@@ -49,15 +49,15 @@ You can install the required dependencies via `pip install -r requirements.txt`.
 
 ## Project Structure
 
-The following should be your directory structure.
+The following should be your directory structure. If this is your first time running, you'll need to create the `/1930` and `/1930/gis` directories under `/data` and add the files, and rename the census data file to be `usa_1930_5.csv`.
 
 * `main.py`
 * `/data`
   * `/1930`
-    * `usa_1930_5.csv` // Required from census extract
+    * `usa_1930_5.csv` // Required (from Census Data)
     * `/gis`
-      * `US_county_1930_conflated.shp` // Required from GIS extract
-      * `US_county_1930_conflated.prj` // Required from GIS extract
+      * `US_county_1930_conflated.shp` // Required (from GIS)
+      * `US_county_1930_conflated.prj` // Required (from GIS)
 
       * `US_county_1930_conflated.dbf`
       * `US_county_1930_conflated.sbn`
