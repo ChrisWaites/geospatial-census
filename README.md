@@ -47,9 +47,16 @@ The following should be your directory structure.
 
 * `main.py`
 * `/data`
-  * `_.csv`
+  * `usa_1930_5.csv` // Required from GIS extract
   * `/gis`
-    * `_.shp`
-    * `_.prj`
+    * `/1930`
+      * `US_county_1930_conflated.shp` // Required from GIS extract
+      * `US_county_1930_conflated.prj` // Required from GIS extract
+
+      * `US_county_1930_conflated.dbf`
+      * `US_county_1930_conflated.sbn`
+      * `US_county_1930_conflated.sbx`
+      * `US_county_1930_conflated.shp.xml`
+      * `US_county_1930_conflated.shx`
 
 Finally, simply run `main.py`.
