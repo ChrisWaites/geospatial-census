@@ -65,4 +65,8 @@ The following should be your directory structure. If this is your first time run
       * `US_county_1930_conflated.shp.xml`
       * `US_county_1930_conflated.shx`
 
-Finally, simply run `main.py`.
+Finally, simply run `python main.py`.
+
+## Converting to Other Formats
+
+Sometimes training data will be standardized in the format of TensorFlow records. [Here](https://www.tensorflow.org/guide/datasets#consuming_csv_data) is a page detailing how one would convert a csv to a TensorFlow records object.
