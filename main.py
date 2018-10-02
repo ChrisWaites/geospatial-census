@@ -5,14 +5,15 @@ from states import states
 from counties import counties
 from coords import coords
 
-file_name = 'data/usa_00001.csv'
-out_file_name = 'out/coordinates.csv'
+file_name = 'data/usa_1930_5.csv'
+out_file_name = 'out/out.csv'
 
 os.makedirs('out', exist_ok=True)
 
 with open(out_file_name, 'w') as g:
     with open(file_name) as f:
         reader = csv.DictReader(f)
+        writer = csv.DictWriter(g, reader.fieldnames + ['latitude', 'longitude'])
         for line in reader:
             try:
                 state_id = line['STATEICP']
@@ -24,7 +25,10 @@ with open(out_file_name, 'w') as g:
                 enum_dist = line['ENUMDIST']
                 latitude, longitude = coords[state_id][county_id]
 
-                g.write('{}, {}\n'.format(latitude, longitude))
+                line['latitude'] = latitude
+                line['longitude'] = longitude
+
+                writer.writerow(line)
             except:
                 pass
 

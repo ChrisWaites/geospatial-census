@@ -1,17 +1,31 @@
 # Geospatial Tools for IPUMS Census Data
 
-First, create an account with [IPUMS USA](https://usa.ipums.org/usa/index.shtml).
+## Getting a Census Extract
 
-Next, create an extract. The sample chosen was `1930s 5%`.
+[1] Create an account on the [IPUMS USA site](https://usa.ipums.org/usa/index.shtml)
+[2] Go to the main page and click “select data”
+[3] Click the blue box labeled “select samples”
+[4]Change the samples from default to the full 1940 census by…
+* Unchecking “default sample from each year”
+* Clicking on the USA full count tab
+* Checking “1930 5%”
+* Clicking “Submit sample selections”
+[5] Select the attributes you want in the dataset
+ * Geospatial data: Household -> Historical Technical -> Enumeration District
+ * Need to also add `STATEICP`, `COUNTY`
+ * Plenty of categorical/numerical under Person -> …
+[6] View cart
+[7] Create data extract
+[8] Change the data format to be .csv
 
-Your extract should include the following attributes, and be in `.csv` format.
 
-* `STATEICP`
-* `COUNTY`
+## Getting County Boundary Information
 
-Next, go to the [IPUMS NHGIS](https://www.nhgis.org/) to extract GIS information.
+[1] Create an account on the [IPUMS NHGIS site](https://www.nhgis.org/).
+[2] Create a data extract for county GIS information for the year `1930`.
 
-Create a data extract for county GIS information for the year `1930`.
+
+## Project Structure
 
 The following should be your directory structure.
 
